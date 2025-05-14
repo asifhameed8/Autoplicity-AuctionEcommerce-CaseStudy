@@ -1,77 +1,138 @@
-# 🚗 Autoplicity – Scalable Auction & Automotive eCommerce Platform (Case Study)
+# 🚗 Autoplicity – Scalable Automotive Auction & eCommerce Platform (Case Study)
 
 🔧 **Role:** Lead Developer – Architecture, Integration & Customization  
-🗓️ **Date:** Jan 2024  
-🏗️ **Stack:** ASP.NET Core · NopCommerce · Angular · ASP.NET MVC · Web API  
+📅 **Date:** January 2024  
+🧱 **Tech Stack:** ASP.NET Core · NopCommerce · Angular · ASP.NET MVC · Web API  
 
 ---
 
-## 🧩 Project Overview
+## 🔍 Project Overview
 
-I developed a high-performance, enterprise-grade automotive eCommerce platform for **Autoplicity** using:
+I engineered a high-performance, enterprise-grade automotive platform for **Autoplicity**, tailored for B2C sales at scale. The solution leverages:
 
-- 🔁 **ASP.NET Core + NopCommerce** for scalable backend and extensibility
-- 🔍 **VIN-based parts search** and dynamic YMM filtering
-- 🚘 **Live inventory sync** for 500,000+ SKUs across multiple categories
-- 💳 **Optimized checkout** and real-time product display
-- ⚙️ **Modular backend** with N-tier architecture and high concurrency support
+- ⚙️ **ASP.NET Core + NopCommerce** for a modular, plugin-driven architecture  
+- 🔍 **VIN-based search & YMM filtering** for personalized product discovery  
+- 🚗 **Live inventory sync** for 500,000+ SKUs  
+- 💳 **Optimized checkout** with custom admin workflows  
+- 📦 **Scalable backend** supporting auctions, product management, and real-time pricing
 
-> ⚡ The platform powers custom car auctions and performance tire sales at scale — designed for B2C traffic and built to convert.
-
----
-
-## 🎯 Key Features
-
-- 🛒 Custom Car Auction System with Bidding Modules  
-- 🔍 VIN & YMM Filtering for Accurate Search  
-- 📦 500K+ SKU Inventory Sync Engine  
-- 🔧 Admin Panel Customizations + Role-based Access  
-- 💬 Integrated NopCommerce Checkout + Reviews  
-- 📈 Fast-Loading UI optimized for mobile & high traffic
+> This platform was purpose-built for **high-volume eCommerce and custom automotive auctions**, with a focus on performance, extensibility, and conversions.
 
 ---
 
-## 🖼️ UI Snapshots
+## ✅ Key Features
+
+- 🛒 Custom **Car Auction System** with bidding & real-time updates  
+- 🔍 **Year/Make/Model (YMM)** filtering and VIN compatibility lookup  
+- 🧠 Inventory sync for **500K+ SKUs**  
+- 🔧 Tailored admin panel with **role-based access control**  
+- 💬 NopCommerce-based checkout, reviews & loyalty features  
+- 📱 Responsive UI for mobile-first shoppers
+
+---
+
+## 🖼️ Screenshots
 
 ### 🎬 Platform Banner
 
 ![Autoplicity Banner](screenshots/autoplicity-banner.png)
 
----
-
-### 🛞 Product Grid: Dynamic Listings
+### 🛞 Product Grid – Dynamic Listings
 
 ![Autoplicity Grid](screenshots/autoplicity-grid.png)
 
----
-
-### 🧾 Product Detail: Tire with YMM Match
+### 📄 Product Detail Page – Tire Match
 
 ![Autoplicity Product](screenshots/autoplicity-detail.png)
 
 ---
 
-## 💡 Built With
+## ⚙️ Tech Stack Overview
 
-- ASP.NET Core Web API  
-- ASP.NET MVC 5  
-- Angular for dynamic modules  
-- NopCommerce (eCommerce engine)  
-- Azure hosting
+| Layer        | Technology                      |
+|--------------|----------------------------------|
+| Backend      | NopCommerce 4.60+ (.NET 7)       |
+| API Bridge   | Custom NopCommerce REST Plugin   |
+| Frontend     | Angular 16+                      |
+| Data Source  | Mocked Tire SKUs (JSON)          |
+
+---
+
+## 🚀 Getting Started (Demo Instructions)
+
+### 🖥️ Backend – NopCommerce Plugin
+
+1. Clone the latest [NopCommerce](https://github.com/nopSolutions/nopCommerce)
+2. Install locally with SQL Server
+3. Add `TireCatalog.API` plugin:
+   - Route: `/api/tireproducts`
+   - Returns a list of tire SKUs with pricing, fitment & stock
+
+4. Enable plugin via Nop Admin Panel
+
+---
+
+### 🌐 Frontend – Angular UI
+
+```bash
+cd Frontend/tire-ui
+npm install
+ng serve
+```
+
+Runs at: `http://localhost:4200`
+
+---
+
+## 📦 Sample API Response
+
+```json
+{
+  "name": "Pirelli Scorpion Verde A/S",
+  "price": "$650.81",
+  "fits": "2024 Acura RDX Base",
+  "inStock": true,
+  "image": "pirelli.jpg"
+}
+```
+
+---
+
+## 📁 Suggested Folder Structure
+
+```
+TireCatalog-Demo-NopCommerce-Angular/
+├── README.md
+├── LICENSE
+├── Frontend/
+│   └── tire-ui/
+│       └── src/app/tire-list/
+│           ├── tire-list.component.ts
+│           ├── tire-list.component.html
+├── Backend/
+│   └── TireCatalog.API.Plugin/
+│       ├── Controllers/
+│       └── Models/
+├── screenshots/
+│   ├── autoplicity-banner.png
+│   ├── autoplicity-grid.png
+│   └── autoplicity-detail.png
+```
 
 ---
 
 ## 🧪 Related Demo Repo (Coming Soon)
 
-[→ View tire product listing demo](https://github.com/asifhameed8/TireCatalog-Demo)
+[→ Tire Catalog Angular + .NET API Demo](https://github.com/asifhameed8/TireCatalog-Demo)
 
 ---
 
-## 🤝 Let’s Collaborate
+## 💬 Work With Me
 
-Need to build a **high-traffic eCommerce platform** or custom **automotive auction portal**?
+Looking to build a **custom eCommerce platform**, **automotive auction system**, or **high-performance NopCommerce marketplace**?
 
-📬 [Hire me on Upwork](https://www.upwork.com/freelancers/asifhameed)  
-🌍 [Visit my portfolio](https://asifhameed.com)
+I help businesses scale with clean architecture, modern UI, and full-stack systems built to convert.
 
----
+📬 [Let’s talk on Upwork](https://www.upwork.com/freelancers/asifhameed)  
+🌐 [Visit my portfolio](https://asifhameed.com)
+
